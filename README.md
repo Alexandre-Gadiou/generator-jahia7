@@ -22,19 +22,16 @@ design your HTML pages with layouts, components ...
 1. Install [nodejs](https://nodejs.org/)
 
 2. Install Grunt
-	* 	```
-		npm install -g grunt-cli
-		```
+	
+	* 	`npm install -g grunt-cli`
 		
 3. Install Bower
-	* 	```
-		npm install -g bower
-		```
+	
+	* 	`npm install -g bower`
 		
 4. Install Yeoman
-	* 	```
-		npm install -g yo
-		```	
+
+	* 	`npm install -g yo`	
 	
 
 ## Installation
@@ -42,13 +39,10 @@ design your HTML pages with layouts, components ...
 1. Download [generator-jahia7](https://github.com/Alexandre-Gadiou/generator-jahia7/archive/master.zip)
 
 2. Install
-	* 	```
-		cd generator-jahia7
-		```
+
+	* 	`cd generator-jahia7`
 		
-	* 	```
-		npm link
-		```
+	* 	`npm link`
 		
 ## Usage	
 
