@@ -36,6 +36,8 @@ design your HTML pages with layouts, components ...
 4. Install Yeoman
 
 	* 	`npm install -g yo`	
+
+5. Install [Maven](https://maven.apache.org/install.html)
 	
 
 ## Installation
@@ -73,3 +75,9 @@ grunt
 ```
 
 This command creates a new folder `src/main/html/dist` which is browsersynch root (the server).
+
+### Deploy project in jahia
+
+```
+mvn clean install jahia:deploy
+```
