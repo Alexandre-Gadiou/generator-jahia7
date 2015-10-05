@@ -50,6 +50,8 @@ As promised, you can now generate the jahia project and then start the prototype
 
 ### Project generation
 
+To generate the jahia project, you need to run this command  :
+
 ```
 yo jahia7
 ```
@@ -57,6 +59,8 @@ yo jahia7
 Then answer to Mr yeoman questions
 
 ### Start the prototype	
+
+You can start the prototype only if you have generated the project before.
 
 To start the prototype, you just need to run this command  :
 
