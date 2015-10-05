@@ -2,6 +2,10 @@
 
 **generator-jahia7** is a yeoman generator to set up a jahia template project in 5 minutes. (if nodejs already installed ...)
 
+**This project is directly inspired from [Fabien Rassinier Github](https://github.com/f4bien/generator-jahia)**
+
+Difference between generator-jahia7 and generator-jahia is the prototype which is based on [EJS](http://ejs.co) technology.
+
 ## Presentation
 
 As we already know, [bootstrap 4 alpha](http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/) moved from LESS to SASS technology.
