@@ -68,4 +68,4 @@ To start the prototype, you just need to run this command  :
 grunt
 ```
 
-This command reates a new folder `src/main/html/dist` which is browsersynch root (the server).
+This command creates a new folder `src/main/html/dist` which is browsersynch root (the server).
