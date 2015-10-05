@@ -1,47 +1,73 @@
-# generator-generator-jahia7 [![Build Status](https://secure.travis-ci.org/Alexandre-Gadiou/generator-generator-jahia7.png?branch=master)](https://travis-ci.org/Alexandre-Gadiou/generator-generator-jahia7)
+# generator-jahia7
 
-> [Yeoman](http://yeoman.io) generator
+**generator-jahia7** is a yeoman generator to set up a jahia template project in 5 minutes. (if nodejs already installed ...)
 
+## Presentation
+
+As we already know, [bootstrap 4 alpha](http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/) moved from LESS to SASS technology.
+ 
+This generator enables to create a **modern** jahia template set project with this packages : 
+
+1. **Bootstrap-SASS 3.3.5**
+2. **Font Awesome 4.4.0**
+3. **jQuery 2.1.4**
+
+Even if Jahia 7 is more user friendly than Jahia 6.6 for front end development, a project always start with a static HTML prototype.
+
+**generator-jahia7** will create a new folder in your jahia project `src/main/html`. In this folder you 
+design your HTML pages with layouts, components ...
 
 ## Getting Started
 
-### What is Yeoman?
+1. Install [nodejs](https://nodejs.org/)
 
-Trick question. It's not a thing. It's this guy:
+2. Install Grunt
+	* 	```
+		npm install -g grunt-cli
+		```
+		
+3. Install Bower
+	* 	```
+		npm install -g bower
+		```
+		
+4. Install Yeoman
+	* 	```
+		npm install -g yo
+		```	
+	
 
-![](http://i.imgur.com/JHaAlBJ.png)
+## Installation
 
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
+1. Download [generator-jahia7](https://github.com/Alexandre-Gadiou/generator-jahia7/archive/master.zip)
 
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
+2. Install
+	* 	```
+		cd generator-jahia7
+		```
+		
+	* 	```
+		npm link
+		```
+		
+## Usage	
 
-```bash
-npm install -g yo
+As promised, you can now generate the jahia project and then start the prototype.
+
+### Project generation
+
+```
+yo jahia7
 ```
 
-### Yeoman Generators
+Then answer to Mr yeoman questions
 
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
+### Start the prototype	
 
-To install generator-generator-jahia7 from npm, run:
+To start the prototype, you just need to run this command  :
 
-```bash
-npm install -g generator-generator-jahia7
+```
+grunt
 ```
 
-Finally, initiate the generator:
-
-```bash
-yo generator jahia7
-```
-
-### Getting To Know Yeoman
-
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
-
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
-
-
-## License
-
-MIT
+This command reates a new folder `src/main/html/dist` which is browsersynch root (the server).
