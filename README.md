@@ -1,5 +1,9 @@
 # generator-jahia7
 
+<a href="https://travis-ci.org/Alexandre-Gadiou/generator-jahia7">
+<img src="https://travis-ci.org/Alexandre-Gadiou/generator-jahia7.svg?branch=master">
+</a>
+
 **generator-jahia7** is a yeoman generator to set up a jahia template project in 5 minutes. (if nodejs already installed ...)
 
 **This project is directly inspired from [Fabien Rassinier Github](https://github.com/f4bien/generator-jahia)**
