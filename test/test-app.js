@@ -17,8 +17,6 @@ describe('generator jahia7:app', function () {
     assert.file([
       'bower.json',
       'package.json',
-      '.editorconfig',
-      '.jshintrc'
     ]);
   });
 });
