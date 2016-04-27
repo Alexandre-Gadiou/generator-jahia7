@@ -86,10 +86,14 @@ module.exports = function (grunt) {
               {expand: true, cwd: 'src/main/resources/fonts', src: ['**/*'], dest: 'src/main/html/dist/fonts'},
             ],
           },
-          vendor: {
+          vendorBower: {
             files: [
               {expand: true, cwd: 'bower_components', src: ['**/*'], dest: 'src/main/html/dist/vendor'},
-              {expand: true, cwd: 'bower_components', src: ['**/*'], dest: 'src/main/resources/vendor'}
+            ],
+          },
+          vendorAssets: {
+            files: [
+              {expand: true, cwd: 'src/main/html/dist/vendor', src: ['**/*'], dest: 'src/main/resources/vendor'}
             ],
           },
         },
@@ -137,7 +141,7 @@ module.exports = function (grunt) {
     grunt.registerTask('buildHTML', ['ejs']);
     grunt.registerTask('buildImages', ['copy:images']);
     grunt.registerTask('buildFonts', ['copy:fonts']);
-    grunt.registerTask('buildVendor', ['copy:vendor']);
+    grunt.registerTask('buildVendor', ['copy:vendorBower','copy:vendorAssets']);
     grunt.registerTask('buildCSS', ['sass','copy:css']);
     grunt.registerTask('buildJS', ['concat','copy:javascript']);
 
