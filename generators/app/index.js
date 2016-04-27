@@ -1,9 +1,10 @@
 'use strict';
-var yeoman = require('yeoman-generator');
+var generators = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
 
-module.exports = yeoman.generators.Base.extend({
+
+module.exports = generators.Base.extend({
 
   prompting: function () {
     var done = this.async();
@@ -43,7 +44,7 @@ module.exports = yeoman.generators.Base.extend({
       type: 'input',
       name: 'jahiaVersion',
       message: 'Jahia version',
-      default : '7.0.0.2'
+      default : '7.1.1.0'
     }
     ];
 
