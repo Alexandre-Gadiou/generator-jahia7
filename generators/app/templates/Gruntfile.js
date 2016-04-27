@@ -141,7 +141,7 @@ module.exports = function (grunt) {
     grunt.registerTask('buildCSS', ['sass','copy:css']);
     grunt.registerTask('buildJS', ['concat','copy:javascript']);
 
-    grunt.registerTask('build', ['clean','buildHTML','buildCSS', 'buildJS','buildImages','buildFonts','buildVendor']);
+    grunt.registerTask('build', ['clean','buildVendor','buildFonts','buildImages','buildHTML','buildCSS', 'buildJS']);
     grunt.registerTask('default', ['build','browserSync','watch']);
     grunt.registerTask('release', ['build', 'uglify','cssmin']);
 

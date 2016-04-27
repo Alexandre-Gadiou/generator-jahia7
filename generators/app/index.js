@@ -107,10 +107,6 @@ module.exports = generators.Base.extend({
         this.templatePath('app/assets/fonts'),
         this.destinationPath('src/main/resources/fonts')
       );
-       this.fs.copy(
-        this.templatePath('app/assets/vendor'),
-        this.destinationPath('src/main/resources/vendor')
-      );
     },
 
     jahiaFiles: function () {
