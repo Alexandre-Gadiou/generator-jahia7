@@ -1,8 +1,8 @@
 # generator-jahia7
 
-<a href="https://travis-ci.org/Alexandre-Gadiou/generator-jahia7">
-<img src="https://travis-ci.org/Alexandre-Gadiou/generator-jahia7.svg?branch=master">
-</a>
+[![build Status](https://travis-ci.org/Alexandre-Gadiou/generator-jahia7.svg)](https://travis-ci.org/Alexandre-Gadiou/generator-jahia7.svg?branch=master)
+
+[![Dependency Status](https://david-dm.org/Alexandre-Gadiou/generator-jahia7.svg)](https://david-dm.org/Alexandre-Gadiou/generator-jahia7) [![devDependency Status](https://david-dm.org/Alexandre-Gadiou/generator-jahia7/dev-status.svg)](https://david-dm.org/Alexandre-Gadiou/generator-jahia7#info=devDependencies)
 
 **generator-jahia7** is a yeoman generator to set up a jahia template project in 5 minutes. (if nodejs already installed ...)
 
