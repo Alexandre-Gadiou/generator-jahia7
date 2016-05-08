@@ -1,19 +1,23 @@
 {
-  "name": "<%= projectArtifactID %>",
-  "version": "0.0.0",
-  "description": "<%= projectDescription %>",
-  "private": true,
-  "devDependencies": {
-    "bower": "^1.7.9",
-    "grunt": "^1.0.1",
-    "grunt-browser-sync": "^2.2.0",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^1.0.1",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-ejs": "^0.3.0"
-  }
+    "name": "<%= projectArtifactID %>",
+    "version": "0.0.0",
+    "description": "<%= projectDescription %>",
+    "private": true,
+    "dependencies": {
+        "jquery": "^2.1.4"
+    },
+    "devDependencies": {
+        "bower": "^1.7.9",
+        "grunt": "^1.0.1",
+        "grunt-browser-sync": "^2.2.0",
+        "grunt-contrib-clean": "^1.0.0",
+        "grunt-browserify": "^4.0.1",
+        "grunt-contrib-concat": "^1.0.1",
+        "grunt-contrib-copy": "^1.0.0",
+        "grunt-contrib-cssmin": "^1.0.1",
+        "grunt-contrib-sass": "^1.0.0",
+        "grunt-contrib-uglify": "^1.0.1",
+        "grunt-contrib-watch": "^1.0.0",
+        "grunt-ejs": "^0.3.0"
+    }
 }
