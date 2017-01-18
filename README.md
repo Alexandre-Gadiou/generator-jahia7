@@ -6,8 +6,6 @@
 
 **generator-jahia7** is a yeoman generator to set up a jahia template project in 5 minutes. (if nodejs already installed ...)
 
-**This project is directly inspired from [Fabien Rassinier Github](https://github.com/f4bien/generator-jahia)**
-
 Difference between generator-jahia7 and generator-jahia is the prototype which is based on [EJS](http://ejs.co) technology.
 
 ## Presentation
@@ -18,7 +16,7 @@ This generator enables to create a **modern** jahia template set project with th
 
 1. **Bootstrap-SASS 3.3.5**
 2. **Font Awesome 4.4.0**
-3. **jQuery 2.1.4**
+3. **jQuery 3.1.1**
 
 Even if Jahia 7 is more user friendly than Jahia 6.6 for front end development, a project always start with a static HTML prototype.
 
@@ -29,9 +27,9 @@ design your HTML pages with layouts, components ...
 
 1. Install [nodejs](https://nodejs.org/)
 
-2. Install Grunt
+2. Install Gulp
 	
-	* 	`npm install -g grunt-cli`
+	* 	`npm install -g gulp`
 		
 3. Install Bower
 	
@@ -75,7 +73,7 @@ You can start the prototype only if you have generated the project before.
 To start the prototype, you just need to run this command  :
 
 ```
-grunt
+gulp
 ```
 
 This command creates a new folder `src/main/html/dist` which is browsersynch root (the server).

@@ -64,7 +64,7 @@ module.exports = generators.Base.extend({
     projectFiles: function () {
       this.template('package.json','package.json');
       this.template('bower.json','bower.json');
-      this.template('Gruntfile.js','Gruntfile.js');
+      this.template('Gulpfile.js','Gulpfile.js');
       this.template('jahia-template/pom.xml','pom.xml');
       this.template('jahia-template/.gitignore','.gitignore');
     },
