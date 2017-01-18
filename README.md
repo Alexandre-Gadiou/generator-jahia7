@@ -2,8 +2,6 @@
 
 [![build Status](https://travis-ci.org/Alexandre-Gadiou/generator-jahia7.svg)](https://travis-ci.org/Alexandre-Gadiou/generator-jahia7.svg?branch=master)
 
-[![Dependency Status](https://david-dm.org/Alexandre-Gadiou/generator-jahia7.svg)](https://david-dm.org/Alexandre-Gadiou/generator-jahia7) [![devDependency Status](https://david-dm.org/Alexandre-Gadiou/generator-jahia7/dev-status.svg)](https://david-dm.org/Alexandre-Gadiou/generator-jahia7#info=devDependencies)
-
 **generator-jahia7** is a yeoman generator to set up a jahia template project in 5 minutes. (if nodejs already installed ...)
 
 Difference between generator-jahia7 and generator-jahia is the prototype which is based on [EJS](http://ejs.co) technology.
