@@ -1,10 +1,10 @@
 // layouts/simple.scss
 
 .simple {
-    .page-content {
 
-        .column {
-            @extend .col-xs-4;
-        }
+	// Boostrap sass grid system
+	// Now, no need to put bootstrap class in your html
+    .column {
+        @extend .col-xs-4;
     }
 }

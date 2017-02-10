@@ -4,6 +4,10 @@
 @import "simple";
 
 .page-content {
-    margin-top: 50px;
+	margin-top: 50px;
+
+	& > .container {
+    	padding:15px
+    }
 }
 
