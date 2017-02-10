@@ -20,9 +20,9 @@
     <template:area path="pagecontent"/>
 </div>
 
-<template:addResources type="css" resources="theme.min.css"/>
+<template:addResources type="css" resources="theme.css"/>
 
-<script src="${url.currentModule}/javascript/main.min.js"></script>
+<script src="${url.currentModule}/javascript/main.js"></script>
 
 </body>
 </html>
