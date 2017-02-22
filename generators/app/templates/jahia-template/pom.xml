@@ -56,7 +56,7 @@
                 </execution>
               </executions>
               <configuration>
-                <executable>grunt</executable>
+                <executable>gulp</executable>
                 <arguments>
                     <argument>release</argument>
                 </arguments>
