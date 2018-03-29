@@ -22,9 +22,25 @@
                   j:view="<%= projectArtifactID %>"
                   jcr:mixinTypes="jmix:theme"
                   jcr:primaryType="jnt:template">
-                    <home jcr:primaryType="jnt:pageTemplate"/>
-                    <simple jcr:primaryType="jnt:pageTemplate"/>
-                </base>
+                        <home jcr:primaryType="jnt:pageTemplate"/>
+                        <simple jcr:primaryType="jnt:pageTemplate"/>
+                        <navigation-menu-zone jcr:primaryType="jnt:contentList">
+                            <navbar addContainerWithinTheNavbar="false"
+                          addLoginButton="false"
+                          buttonClass="navbar-toggler navbar-toggler-right"
+                          divClass="collapse navbar-collapse"
+                          jcr:mixinTypes="bootstrap4mix:advancedNavbar bootstrap4mix:customBaseNavbar bootstrap4mix:customButtonNavbar"
+                          jcr:primaryType="bootstrap4nt:navbar"
+                          navClass="navbar navbar-expand-md navbar-dark fixed-top bg-dark"
+                          recursive="true"
+                          root="homePage"
+                          ulClass="navbar-nav ml-auto">
+                                <j:translation_en brandText="MySite"
+                                       jcr:language="en"
+                                       jcr:primaryType="jnt:translation"/>
+                            </navbar>
+                        </navigation-menu-zone>
+                    </base>
             </templates>
                 
                 <home j:isHomePage="true"

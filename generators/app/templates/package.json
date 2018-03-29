@@ -4,24 +4,23 @@
     "description": "<%= projectDescription %>",
     "private": true,
     "dependencies": {
-        "gulp-install": "latest",
-        "jquery": "^3.1.1"
+        "bootstrap": "4.0.0",
+        "font-awesome-sass": "4.7.0",
+        "jquery": "3.2.1",
+        "tether": "1.4.0"
     },
     "devDependencies": {
-        "bower": "latest",
         "browser-sync": "latest",
+        "browserify": "16.1.1",
         "del": "latest",
-        "gulp": "^3.9.1",
-        "gulp-batch": "^1.0.5",
-        "gulp-browserify": "^0.5.1",
-        "gulp-clean-css": "^2.2.2",
-        "gulp-copy": "^1.0.0",
-        "gulp-ejs": "^2.3.0",
-        "gulp-load-plugins": "^1.2.0",
+        "gulp": "github:gulpjs/gulp#4.0",
+        "gulp-clean-css": "3.9.3",
+        "gulp-ejs": "3.1.2",
+        "gulp-install": "latest",
         "gulp-rename": "latest",
-        "gulp-sass": "^2.2.0",
-        "gulp-uglify": "^2.0.0",
-        "gulp-watch": "^4.3.11",
-        "run-sequence": "^1.2.2"
+        "gulp-sass": "3.2.1",
+        "gulp-uglify": "3.0.0",
+        "gulp-watch": "5.0.0",
+        "vinyl-source-stream": "2.0.0"
     }
 }

@@ -44,7 +44,7 @@ module.exports = generators.Base.extend({
       type: 'input',
       name: 'jahiaVersion',
       message: 'Jahia version',
-      default : '7.1.1.0'
+      default : '7.2.0.0'
     }
     ];
 
@@ -63,7 +63,6 @@ module.exports = generators.Base.extend({
   writing: {
     projectFiles: function () {
       this.template('package.json','package.json');
-      this.template('bower.json','bower.json');
       this.template('Gulpfile.js','Gulpfile.js');
       this.template('jahia-template/pom.xml','pom.xml');
       this.template('jahia-template/.gitignore','.gitignore');
@@ -146,8 +145,11 @@ module.exports = generators.Base.extend({
     }
   },
 
-  install: function () {
-    this.installDependencies();
+  install() {
+    this.installDependencies({
+      npm: true,
+      bower: false,      
+    });
   }
 
 });

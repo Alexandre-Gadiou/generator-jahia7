@@ -69,7 +69,7 @@
                 <configuration>
                     <instructions>
                         <Jahia-Module-Type>templatesSet</Jahia-Module-Type>
-                        <Jahia-Depends>default</Jahia-Depends>
+                        <Jahia-Depends>default,bootstrap4-components</Jahia-Depends>
                     </instructions>
                 </configuration>
             </plugin>

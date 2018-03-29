@@ -5,6 +5,12 @@
 	// Boostrap sass grid system
 	// Now, no need to put bootstrap class in your html
     .column {
-        @extend .col-xs-4;
-    }
+        @extend .col-4;
+	}
+	
+   .page-content {
+		& > .container {
+        	padding:15px
+        }
+	}
 }
