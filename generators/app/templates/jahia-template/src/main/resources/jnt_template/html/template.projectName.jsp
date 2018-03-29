@@ -10,7 +10,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>${fn:escapeXml(renderContext.mainResource.node.displayableName)}</title>
+	<title>${pageTitle}</title>
 
 	<c:if test="${not empty description}">
 		<meta name="description" content="${fn:escapeXml(description.string)}">

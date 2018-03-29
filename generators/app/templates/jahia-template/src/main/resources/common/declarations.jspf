@@ -26,3 +26,10 @@
 <c:set var="isStudioMode" value="${renderContext.editModeConfigName eq 'studiomode'}"/>
 <c:set var="isEditMode" value="${renderContext.editMode}"/>
 <c:set var="isPreviewMode" value="${renderContext.previewMode}"/>
+
+<c:set var="templateName" value="${renderContext.mainResource.node.propertiesAsString['j:templateName']}"/>
+<c:set var="pageTitle" value="${fn:escapeXml(renderContext.mainResource.node.displayableName)}"/>
+
+<c:if test="${templateName ne 'home'}">
+    <c:set var="templateCSS" value="simple"/>
+</c:if>
