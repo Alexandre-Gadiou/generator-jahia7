@@ -28,15 +28,11 @@ design your HTML pages with layouts, components ...
 	
 	* 	`npm install -g gulp`
 		
-3. Install Bower
-	
-	* 	`npm install -g bower`
-		
-4. Install Yeoman
+3. Install Yeoman
 
 	* 	`npm install -g yo`	
 
-5. Install [Maven](https://maven.apache.org/install.html)
+4. Install [Maven](https://maven.apache.org/install.html)
 	
 
 ## Installation
