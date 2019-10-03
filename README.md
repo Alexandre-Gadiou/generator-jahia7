@@ -7,8 +7,6 @@
 Difference between generator-jahia7 and generator-jahia is the prototype which is based on [EJS](http://ejs.co) technology.
 
 ## Presentation
-
-As we already know, [bootstrap 4 alpha](http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/) moved from LESS to SASS technology.
  
 This generator enables to create a **modern** jahia template set project with this packages : 
 
@@ -17,7 +15,7 @@ This generator enables to create a **modern** jahia template set project with th
 3. **Tether 1.4.7**
 4. **Font Awesome 4.7.0**
 
-Even if Jahia 7 is more user friendly than Jahia 6.6 for front end development, a project always start with a static HTML prototype.
+A project always start with a static HTML prototype.
 
 **generator-jahia7** will create a new folder in your jahia project `src/main/html`. In this folder you 
 design your HTML pages with layouts, components ...
