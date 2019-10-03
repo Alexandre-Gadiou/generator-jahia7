@@ -12,9 +12,10 @@ As we already know, [bootstrap 4 alpha](http://blog.getbootstrap.com/2015/08/19/
  
 This generator enables to create a **modern** jahia template set project with this packages : 
 
-1. **Bootstrap-SASS 3.3.5**
-2. **Font Awesome 4.4.0**
-3. **jQuery 3.1.1**
+1. **Bootstrap 4.3.1**
+2. **jQuery 3.4.1**
+3. **Tether 1.4.7**
+4. **Font Awesome 4.7.0**
 
 Even if Jahia 7 is more user friendly than Jahia 6.6 for front end development, a project always start with a static HTML prototype.
 
