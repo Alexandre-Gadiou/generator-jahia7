@@ -15,8 +15,7 @@ describe('generator jahia7:app', function () {
 
     it('creates files', function () {
         assert.file([
-            'bower.json',
-            'package.json',
+            'package.json'
         ]);
     });
 });

@@ -1,13 +1,16 @@
 'use strict';
-var generators = require('yeoman-generator');
+
+var Generator = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
 
+module.exports = class extends Generator {
 
-module.exports = generators.Base.extend({
-
-  prompting: function () {
-    var done = this.async();
+  constructor(args, opts) {
+    super(args, opts);
+  }
+  
+  prompting() {
 
     this.log(yosay(chalk.green('Jahia7 template project generator')));
 
@@ -44,106 +47,66 @@ module.exports = generators.Base.extend({
       type: 'input',
       name: 'jahiaVersion',
       message: 'Jahia version',
-      default : '7.2.0.0'
+      default : '7.3.3.0'
     }
     ];
 
-    this.prompt(prompts, function (props) {
-      
-    this.projectName = props.projectName;
-    this.projectDescription = props.projectDescription;
-    this.projectGroupID = props.projectGroupID;
-    this.projectArtifactID = props.projectArtifactID;
-    this.jahiaVersion = props.jahiaVersion;
+    return this.prompt(prompts).then(props => {
+      this.projectName = props.projectName;
+      this.projectDescription = props.projectDescription;
+      this.projectGroupID = props.projectGroupID;
+      this.projectArtifactID = props.projectArtifactID;
+      this.jahiaVersion = props.jahiaVersion;
+    });
+   
+  }
 
-      done();
-    }.bind(this));
-  },
+  writing() {
+    const templateData = {
+      projectName: this.projectName,
+      projectDescription: this.projectDescription,
+      projectGroupID: this.projectGroupID,
+      projectArtifactID: this.projectArtifactID,
+      jahiaVersion: this.jahiaVersion,
+    };
 
-  writing: {
-    projectFiles: function () {
-      this.template('package.json','package.json');
-      this.template('Gulpfile.js','Gulpfile.js');
-      this.template('jahia-template/pom.xml','pom.xml');
-      this.template('jahia-template/.gitignore','.gitignore');
-    },
+    const copy = (input, output) => {
+      this.fs.copy(this.templatePath(input), this.destinationPath(output));
+    };
 
-    prototypeFiles: function () {
-      this.fs.copy(
-        this.templatePath('app/pages'),
-        this.destinationPath('src/main/html/pages')
+    const copyTpl = (input, output, data) => {
+      this.fs.copyTpl(
+        this.templatePath(input),
+        this.destinationPath(output),
+        data
       );
-      this.fs.copy(
-        this.templatePath('app/components'),
-        this.destinationPath('src/main/html/components')
-      );
-      this.fs.copy(
-        this.templatePath('app/content'),
-        this.destinationPath('src/main/html/content')
-      );
-      this.fs.copy(
-        this.templatePath('app/layouts'),
-        this.destinationPath('src/main/html/layouts')
-      );
-      this.fs.copy(
-        this.templatePath('app/partials'),
-        this.destinationPath('src/main/html/partials')
-      );
+    };
 
-      this.fs.copy(
-        this.templatePath('app/assets/images'),
-        this.destinationPath('src/main/resources/images')
-      );
-      this.fs.copy(
-        this.templatePath('app/assets/javascript'),
-        this.destinationPath('src/main/resources/javascript')
-      );
-      this.fs.copy(
-        this.templatePath('app/assets/sass'),
-        this.destinationPath('src/main/resources/sass')
-      );
-      this.fs.copy(
-        this.templatePath('app/assets/fonts'),
-        this.destinationPath('src/main/resources/fonts')
-      );
-    },
+    copyTpl('package.json','package.json',templateData);
+    copyTpl('Gulpfile.js','Gulpfile.js',templateData);
+    copyTpl('jahia-template/pom.xml','pom.xml',templateData);
+    copyTpl('jahia-template/.gitignore','.gitignore',templateData);
 
-    jahiaFiles: function () {
-      this.template('jahia-template/src/main/import/repository.xml','src/main/import/repository.xml');
-      this.fs.copy(
-        this.templatePath('jahia-template/src/main/resources/common/declarations.jspf'),
-        this.destinationPath('src/main/resources/common/declarations.jspf')
-      );
-      this.fs.copy(
-        this.templatePath('jahia-template/src/main/resources/jnt_template/html/template.projectName.jsp'),
-        this.destinationPath('src/main/resources/jnt_template/html/template.'+this.projectArtifactID+'.jsp')
-      );
-      this.fs.copy(
-        this.templatePath('jahia-template/src/main/resources/META-INF/definitions.cnd'),
-        this.destinationPath('src/main/resources/META-INF/definitions.cnd')
-      );
-      this.fs.copy(
-        this.templatePath('jahia-template/src/main/resources/META-INF/projectName.tld'),
-        this.destinationPath('src/main/resources/META-INF/'+this.projectArtifactID+'.tld')
-      );
-      this.fs.copy(
-        this.templatePath('jahia-template/src/main/resources/META-INF/spring/projectName.xml'),
-        this.destinationPath('src/main/resources/META-INF/spring/'+this.projectArtifactID+'.xml')
-      );
-      this.fs.copy(
-        this.templatePath('jahia-template/src/main/resources/resources/projectName.properties'),
-        this.destinationPath('src/main/resources/resources/'+this.projectArtifactID+'.properties')
-      );
-      this.fs.copy(
-        this.templatePath('jahia-template/src/site/site.xml'),
-        this.destinationPath('src/site/site.xml')
-      );
-      this.fs.copy(
-        this.templatePath('jahia-template/src/site/apt/index.apt'),
-        this.destinationPath('src/site/apt/index.apt')
-      );
-    }
-  },
+    copy('app/pages','src/main/html/pages');
+    copy('app/components','src/main/html/components');
+    copy('app/content','src/main/html/content');
+    copy('app/layouts','src/main/html/layouts');
+    copy('app/partials','src/main/html/partials');
+    copy('app/assets/images','src/main/resources/images');
+    copy('app/assets/javascript','src/main/resources/javascript');
+    copy('app/assets/sass','src/main/resources/sass');
+    copy('app/assets/fonts','src/main/resources/font');
+
+    copyTpl('jahia-template/src/main/import/repository.xml','src/main/import/repository.xml',templateData);
+    copy('jahia-template/src/main/resources/common/declarations.jspf','src/main/resources/common/declarations.jspf');
+    copy('jahia-template/src/main/resources/jnt_template/html/template.projectName.jsp','src/main/resources/jnt_template/html/template.'+this.projectArtifactID+'.jsp');
+    copy('jahia-template/src/main/resources/META-INF/definitions.cnd','src/main/resources/META-INF/definitions.cnd');
+    copy('jahia-template/src/main/resources/META-INF/projectName.tld','src/main/resources/META-INF/'+this.projectArtifactID+'.tld');
+    copy('jahia-template/src/main/resources/META-INF/spring/projectName.xml','src/main/resources/META-INF/spring/'+this.projectArtifactID+'.xml');
+    copy('jahia-template/src/main/resources/resources/projectName.properties','src/main/resources/resources/'+this.projectArtifactID+'.properties');
+    copy('jahia-template/src/site/site.xml','src/site/site.xml');
+    copy('jahia-template/src/site/apt/index.apt','src/site/apt/index.apt');
+  }
 
   install() {
     this.installDependencies({
@@ -151,5 +114,5 @@ module.exports = generators.Base.extend({
       bower: false,      
     });
   }
-
-});
+ 
+};
