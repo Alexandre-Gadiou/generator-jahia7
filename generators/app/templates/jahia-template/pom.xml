@@ -69,6 +69,7 @@
                 <configuration>
                     <instructions>
                         <Jahia-Module-Type>templatesSet</Jahia-Module-Type>
+                        <Jahia-Static-Resources>/css,/javascript,/fonts,/images</Jahia-Static-Resources>
                         <Jahia-Depends>default,bootstrap4-components</Jahia-Depends>
                     </instructions>
                 </configuration>

@@ -95,7 +95,7 @@ module.exports = class extends Generator {
     copy('app/assets/images','src/main/resources/images');
     copy('app/assets/javascript','src/main/resources/javascript');
     copy('app/assets/sass','src/main/resources/sass');
-    copy('app/assets/fonts','src/main/resources/font');
+    copy('app/assets/fonts','src/main/resources/fonts');
 
     copyTpl('jahia-template/src/main/import/repository.xml','src/main/import/repository.xml',templateData);
     copy('jahia-template/src/main/resources/common/declarations.jspf','src/main/resources/common/declarations.jspf');
